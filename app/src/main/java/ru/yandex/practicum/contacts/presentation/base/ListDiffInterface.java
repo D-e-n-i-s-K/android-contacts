@@ -7,4 +7,6 @@ public interface ListDiffInterface <T> {
     boolean theSameAs(T type);
     boolean equals(Object o);
 
+    // тест коммент
+
 }
