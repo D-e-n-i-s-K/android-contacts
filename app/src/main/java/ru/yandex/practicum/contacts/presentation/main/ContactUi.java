@@ -6,9 +6,8 @@ import java.util.List;
 
 import ru.yandex.practicum.contacts.model.ContactType;
 import ru.yandex.practicum.contacts.presentation.base.ListDiffInterface;
-import ru.yandex.practicum.contacts.presentation.filter.model.FilterContactTypeUi;
 
-public class ContactUi implements ListDiffInterface {
+public class ContactUi implements ListDiffInterface<ContactUi> {
 
     private final String name;
     private final String phone;
@@ -45,8 +44,8 @@ public class ContactUi implements ListDiffInterface {
 
 
     @Override
-    public boolean theSameAs(Object listDiffCallback) {
-        return this.hashCode() == listDiffCallback.hashCode();
+    public boolean theSameAs(ContactUi contactUi) {
+        return  this.hashCode() == contactUi.hashCode();
     }
 
     @Override
